@@ -1,19 +1,78 @@
 :root {
-    --main-font: 'Roboto', sans-serif;
+    --main-font: 'Roboto Mono', monospace;
     --main-color: #6b6486;
     --main-bg-color: #f9f6ed;
+    --color_black: rgba(0,0,0,0.75);
 }
 
 html {
     font-size: 62.5%;
+    padding: 2rem;
 }
 
 body{
-    background-color: var(--main-bg-color);
     font-family: var(--main-font);
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
-    color: var(--main-color);
-    font-size: 5rem;
+    color: var(--color_black);
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+.container{
+    background-color: var(--main-bg-color);
+    width: 90rem;
+    height: 90vh;
+    border-radius: 2rem;
+    border: 0.3rem solid var(--color_black);
+    -webkit-box-shadow: 9px 9px 0px 2px var(--color_black);
+    -moz-box-shadow: 9px 9px 0px 2px var(--color_black);
+    box-shadow: 9px 9px 0px 2px var(--color_black);
+}
+
+.navegador{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    border-bottom: 0.3rem solid var(--color_black);
+}
+
+.titulo_contenedor{
+    margin-left: 3rem;
+}
+
+.circulos_containter{
+    display: flex;
+    justify-content: end;
+    margin-right: 3rem;
+}
+
+.circulos{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 8rem;
+}
+
+.circulo_negro{
+    background-color: #000;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 0.3rem solid var(--color_black);
+}
+
+.circulo_blanco{
+    background-color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 0.3rem solid var(--color_black);
 }
