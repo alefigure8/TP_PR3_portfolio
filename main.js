@@ -9,11 +9,11 @@ const contacto = document.getElementById('contacto');
 
 /* Ir a cada seccion */
 inicio.addEventListener('click', () => {
-    window.scrollTo({ top: section_1.offsetTop - 70, behavior: 'smooth' });
+    window.scrollTo({ top: section_1.offsetTop - 64, behavior: 'smooth' });
 })
 
 proyecto.addEventListener('click', () => {
-    window.scrollTo({ top: section_2.offsetTop - 70, behavior: 'smooth' });
+    window.scrollTo({ top: section_2.offsetTop - 64, behavior: 'smooth' });
 })
 
 contacto.addEventListener('click', () => {
