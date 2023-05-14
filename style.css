@@ -17,6 +17,8 @@ body {
     font-family: var(--main-font);
     display: flex;
     justify-content: center;
+    background-color: #eceae5;
+    background: linear-gradient(135deg, #fdf8fc55 25%, transparent 25%) -18px 0/ 36px 36px, linear-gradient(225deg, #fdf8fc 25%, transparent 25%) -18px 0/ 36px 36px, linear-gradient(315deg, #fdf8fc55 25%, transparent 25%) 0px 0/ 36px 36px, linear-gradient(45deg, #fdf8fc 25%, #eceae5 25%) 0px 0/ 36px 36px;
 }
 
 h1 {
@@ -203,6 +205,7 @@ footer {
     height: 2rem;
     border-radius: 50%;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
     box-shadow: 1px 1px 0px var(--btn_primary), 1px 1px 0px var(--btn_primary), 2px 2px 0px var(--btn_primary), 3px 3px 0px var(--btn_primary), 4px 4px 0px var(--btn_primary), 5px 5px 0px var(--btn_primary);
 }
 
