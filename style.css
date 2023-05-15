@@ -26,7 +26,6 @@ html {
 }
 
 body {
-  position: relative;
   font-family: var(--main-font);
   display: flex;
   justify-content: center;
@@ -611,9 +610,9 @@ footer {
 
 .screen_absolute{
   height: auto;
-  position: relative;
+  position: absolute;
   width: 60rem;
-  left: 0%;
+  left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 2;
 }
