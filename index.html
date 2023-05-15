@@ -29,15 +29,22 @@
     <meta property="og:description" content="Descripción de la página" />
     <meta property="og:image" content="URL de la imagen" />
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
     <!-- Styles -->
     <link rel="stylesheet" href="normalize.css" />
@@ -73,169 +80,244 @@
               <div alt="Perfil" class="imagen_perfil filtro-bn"></div>
             </div>
             <div class="sobre_mi">
-                <div class="sobre_mi_container">
-                    <h2 class="titulo_2">Ale Gomez Nieto</h2>
-                    <p class="parrafo_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, a.</p>
+              <div class="sobre_mi_container">
+                <h2 class="titulo_2">Ale Gomez Nieto</h2>
+                <p class="parrafo_1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Fugit, a.
+                </p>
+                <div class="language">
+                  <ul class="ul_language">
+                    <li class="li_language">
+                      <i class="devicon-cplusplus-plain"></i>
+                    </li>
+                    <li class="li_language">
+                      <i class="devicon-csharp-plain"></i>
+                    </li>
+                    <li class="li_language">
+                      <i class="devicon-dot-net-plain"></i>
+                    </li>
+                    <li class="li_language">
+                      <i class="devicon-javascript-plain"></i>
+                    </li>
+                    <li class="li_language">
+                      <i class="devicon-microsoftsqlserver-plain"></i>
+                    </li>
+                  </ul>
                 </div>
+                <a class="btn sombra_3D btn_cv"
+                  >Bajar CV <i class="fa-solid fa-cloud-arrow-down icon_cv"></i
+                ></a>
+              </div>
             </div>
           </section>
           <!-- SECCION 2 -->
           <section class="section" id="section_2">
-            <h2 >Proyectos</h2>
+            <span class="cursor_terminal">
+              <i class="fa-solid fa-terminal"></i>
+              <p class="titulo_5 text">Proyectos</p></span
+            >
             <div class="cards">
-                <!-- CARD-->
-                <div class="card sombra" id="card_1">
-                    <div class="card_bar">
-                        <div class="circulos_screen">
-                            <div class="circulo_blanco_screen"></div>
-                            <div class="circulo_blanco_screen"></div>
-                        </div>
-                            <p class="titulo_3">06/2022</p>
-                        <div class="cruz">
-                            <i class="fa-solid fa-xmark"></i>
-                        </div>
-                    </div>
-                    <div class="card_body">
-                        <div class="image_screen_1 image_screen_container">
-                        </div>
-                        <div class="card_body_container">
-                            <p class="titulo_4">Proyecto 1</p>
-                            <p class="parrafo_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                            <div class="card_body_container_links">
-                                <a class="btn btn_screen " href="#" class="link">Ver proyecto</a>
-                            </div>
-                        </div>
-                    </div>
+              <!-- CARD-->
+              <div class="card sombra" id="card_1">
+                <div class="card_bar" id="card_bar_1">
+                  <div class="circulos_screen">
+                    <div class="circulo_blanco_screen"></div>
+                    <div class="circulo_blanco_screen"></div>
+                  </div>
+                  <p class="titulo_3">06/2022</p>
+                  <div class="cruz">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
                 </div>
-                <!-- CARD-->
-                <div class="card sombra" id="card_2">
-                    <div class="card_bar">
-                        <div class="circulos_screen">
-                            <div class="circulo_blanco_screen"></div>
-                            <div class="circulo_blanco_screen"></div>
-                        </div>
-                            <p class="titulo_3">06/2022</p>
-                        <div class="cruz">
-                            <i class="fa-solid fa-xmark"></i>
-                        </div>
+                <div class="card_body">
+                  <div
+                    class="image_screen_1 image_screen_container"
+                    id="image_1"
+                  ></div>
+                  <div class="card_body_container">
+                    <p class="titulo_4">Proyecto 1</p>
+                    <p class="parrafo_2">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam, voluptatum.
+                    </p>
+                    <div class="card_body_container_links">
+                      <a class="btn btn_screen" href="#" class="link"
+                        >Ver proyecto</a
+                      >
                     </div>
-                    <div class="card_body">
-                        <div class="image_screen_1 image_screen_container">
-                        </div>
-                        <div class="card_body_container">
-                            <p class="titulo_4">Proyecto 1</p>
-                            <p class="parrafo_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                            <div class="card_body_container_links">
-                                <a class="btn btn_screen " href="#" class="link">Ver proyecto</a>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-                <!-- CARD-->
-                <div class="card sombra" id="card_3">
-                    <div class="card_bar">
-                        <div class="circulos_screen">
-                            <div class="circulo_blanco_screen"></div>
-                            <div class="circulo_blanco_screen"></div>
-                        </div>
-                            <p class="titulo_3">06/2022</p>
-                        <div class="cruz">
-                            <i class="fa-solid fa-xmark"></i>
-                        </div>
-                    </div>
-                    <div class="card_body">
-                        <div class="image_screen_1 image_screen_container">
-                        </div>
-                        <div class="card_body_container">
-                            <p class="titulo_4">Proyecto 1</p>
-                            <p class="parrafo_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                            <div class="card_body_container_links">
-                                <a class="btn btn_screen " href="#" class="link">Ver proyecto</a>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <!-- CARD-->
+              <div class="card sombra" id="card_2">
+                <div class="card_bar" id="card_bar_2">
+                  <div class="circulos_screen">
+                    <div class="circulo_blanco_screen"></div>
+                    <div class="circulo_blanco_screen"></div>
+                  </div>
+                  <p class="titulo_3">06/2022</p>
+                  <div class="cruz">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
                 </div>
-                <!-- CARD-->
-                <div class="card sombra" id="card_4">
-                    <div class="card_bar">
-                        <div class="circulos_screen">
-                            <div class="circulo_blanco_screen"></div>
-                            <div class="circulo_blanco_screen"></div>
-                        </div>
-                            <p class="titulo_3">06/2022</p>
-                        <div class="cruz">
-                            <i class="fa-solid fa-xmark"></i>
-                        </div>
+                <div class="card_body">
+                  <div
+                    class="image_screen_1 image_screen_container"
+                    id="image_2"
+                  ></div>
+                  <div class="card_body_container">
+                    <p class="titulo_4">Proyecto 1</p>
+                    <p class="parrafo_2">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam, voluptatum.
+                    </p>
+                    <div class="card_body_container_links">
+                      <a class="btn btn_screen" href="#" class="link"
+                        >Ver proyecto</a
+                      >
                     </div>
-                    <div class="card_body">
-                        <div class="image_screen_1 image_screen_container">
-                        </div>
-                        <div class="card_body_container">
-                            <p class="titulo_4">Proyecto 1</p>
-                            <p class="parrafo_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                            <div class="card_body_container_links">
-                                <a class="btn btn_screen " href="#" class="link">Ver proyecto</a>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-                <!-- CARD-->
-                <div class="card sombra" id="card_5">
-                    <div class="card_bar">
-                        <div class="circulos_screen">
-                            <div class="circulo_blanco_screen"></div>
-                            <div class="circulo_blanco_screen"></div>
-                        </div>
-                            <p class="titulo_3">06/2022</p>
-                        <div class="cruz">
-                            <i class="fa-solid fa-xmark"></i>
-                        </div>
-                    </div>
-                    <div class="card_body">
-                        <div class="image_screen_1 image_screen_container">
-                        </div>
-                        <div class="card_body_container">
-                            <p class="titulo_4">Proyecto 1</p>
-                            <p class="parrafo_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                            <div class="card_body_container_links">
-                                <a class="btn btn_screen " href="#" class="link">Ver proyecto</a>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <!-- CARD-->
+              <div class="card sombra" id="card_3">
+                <div class="card_bar" id="card_bar_3">
+                  <div class="circulos_screen">
+                    <div class="circulo_blanco_screen"></div>
+                    <div class="circulo_blanco_screen"></div>
+                  </div>
+                  <p class="titulo_3">06/2022</p>
+                  <div class="cruz">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
                 </div>
-                <!-- CARD-->
-                <div class="card sombra" id="card_6">
-                    <div class="card_bar">
-                        <div class="circulos_screen">
-                            <div class="circulo_blanco_screen"></div>
-                            <div class="circulo_blanco_screen"></div>
-                        </div>
-                            <p class="titulo_3">06/2022</p>
-                        <div class="cruz">
-                            <i class="fa-solid fa-xmark"></i>
-                        </div>
+                <div class="card_body">
+                  <div
+                    class="image_screen_1 image_screen_container"
+                    id="image_3"
+                  ></div>
+                  <div class="card_body_container">
+                    <p class="titulo_4">Proyecto 1</p>
+                    <p class="parrafo_2">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam, voluptatum.
+                    </p>
+                    <div class="card_body_container_links">
+                      <a class="btn btn_screen" href="#" class="link"
+                        >Ver proyecto</a
+                      >
                     </div>
-                    <div class="card_body">
-                        <div class="image_screen_1 image_screen_container">
-                        </div>
-                        <div class="card_body_container">
-                            <p class="titulo_4">Proyecto 1</p>
-                            <p class="parrafo_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-                            <div class="card_body_container_links">
-                                <a class="btn btn_screen " href="#" class="link">Ver proyecto</a>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-                <!-- CARD-->
+              </div>
+              <!-- CARD-->
+              <div class="card sombra" id="card_4">
+                <div class="card_bar" id="card_bar_4">
+                  <div class="circulos_screen">
+                    <div class="circulo_blanco_screen"></div>
+                    <div class="circulo_blanco_screen"></div>
+                  </div>
+                  <p class="titulo_3">06/2022</p>
+                  <div class="cruz">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+                <div class="card_body">
+                  <div
+                    class="image_screen_1 image_screen_container"
+                    id="image_4"
+                  ></div>
+                  <div class="card_body_container">
+                    <p class="titulo_4">Proyecto 1</p>
+                    <p class="parrafo_2">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam, voluptatum.
+                    </p>
+                    <div class="card_body_container_links">
+                      <a class="btn btn_screen" href="#" class="link"
+                        >Ver proyecto</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CARD-->
+              <div class="card sombra" id="card_5">
+                <div class="card_bar" id="card_bar_5">
+                  <div class="circulos_screen">
+                    <div class="circulo_blanco_screen"></div>
+                    <div class="circulo_blanco_screen"></div>
+                  </div>
+                  <p class="titulo_3">06/2022</p>
+                  <div class="cruz">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+                <div class="card_body">
+                  <div
+                    class="image_screen_1 image_screen_container"
+                    id="image_5"
+                  ></div>
+                  <div class="card_body_container">
+                    <p class="titulo_4">Proyecto 1</p>
+                    <p class="parrafo_2">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam, voluptatum.
+                    </p>
+                    <div class="card_body_container_links">
+                      <a class="btn btn_screen" href="#" class="link"
+                        >Ver proyecto</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CARD-->
+              <div class="card sombra" id="card_6">
+                <div class="card_bar" id="card_bar_6">
+                  <div class="circulos_screen">
+                    <div class="circulo_blanco_screen"></div>
+                    <div class="circulo_blanco_screen"></div>
+                  </div>
+                  <p class="titulo_3">06/2022</p>
+                  <div class="cruz">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+                <div class="card_body">
+                  <div
+                    class="image_screen_1 image_screen_container"
+                    id="image_6"
+                  ></div>
+                  <div class="card_body_container">
+                    <p class="titulo_4">Proyecto 1</p>
+                    <p class="parrafo_2">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam, voluptatum.
+                    </p>
+                    <div class="card_body_container_links">
+                      <a class="btn btn_screen" href="#" class="link"
+                        >Ver proyecto</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CARD-->
             </div>
             <div class="mostrar_mas">
-                <a href="#" class="btn btn_mostrar_mas sombra_3D" id="mostrar_mas">Mostrar más</a>
+              <a href="#" class="btn btn_mostrar_mas sombra_3D" id="mostrar_mas"
+                >Mostrar más</a
+              >
             </div>
           </section>
           <!-- SECCION 3 -->
           <section class="section" id="section_3">
-            <h2>Contacto</h2>
+            <span class="cursor_terminal">
+              <i class="fa-solid fa-terminal"></i>
+              <p class="titulo_5 text">Contacto</p></span
+            >
           </section>
         </div>
         <footer id="footer">
