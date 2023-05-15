@@ -29,6 +29,15 @@ const image_4 = document.getElementById("image_4");
 const image_5 = document.getElementById("image_5");
 const image_6 = document.getElementById("image_6");
 
+const texto_1 = document.getElementById("texto_1");
+const texto_2 = document.getElementById("texto_2");
+const texto_3 = document.getElementById("texto_3");
+const texto_4 = document.getElementById("texto_4");
+const texto_5 = document.getElementById("texto_5");
+const texto_6 = document.getElementById("texto_6");
+
+const screen_placeholder_1 = document.getElementById("screen_placeholder_1");
+
 const cards = [card_1, card_2, card_3, card_4, card_5, card_6];
 const card_bars = [
   card_bar_1,
@@ -46,6 +55,21 @@ const mostrar_mas = document.getElementById("mostrar_mas");
 const cerrar = document.getElementById("cerrar");
 const abrir = document.getElementById("abrir");
 
+const abrir_screen_1 = document.getElementById("abrir_screen_1");
+const abrir_screen_2 = document.getElementById("abrir_screen_2");
+const abrir_screen_3 = document.getElementById("abrir_screen_3");
+const abrir_screen_4 = document.getElementById("abrir_screen_4");
+const abrir_screen_5 = document.getElementById("abrir_screen_5");
+const abrir_screen_6 = document.getElementById("abrir_screen_6");
+
+const screen_cards = [
+  abrir_screen_1,
+  abrir_screen_2,
+  abrir_screen_3,
+  abrir_screen_4,
+  abrir_screen_5,
+  abrir_screen_6,
+];
 
 /*al iniciar*/
 window.onload = () => {
@@ -54,7 +78,6 @@ window.onload = () => {
   card_5.classList.add("hide");
   card_6.classList.add("hide");
 };
-
 
 /* Ir a cada seccion */
 inicio.addEventListener("click", () => {
@@ -69,12 +92,10 @@ contacto.addEventListener("click", () => {
   window.scrollTo({ top: section_3.offsetTop - 50, behavior: "smooth" });
 });
 
-
 /* Regresar TOP*/
 btnRegresar.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-
 
 /* Cerrar menu */
 cerrar.addEventListener("click", () => {
@@ -97,7 +118,6 @@ mostrar_mas.addEventListener("click", () => {
     mostrar_mas.innerText == "Mostrar más" ? "Mostrar menos" : "Mostrar más";
 });
 
-
 /* Mostrar boton regresar */
 window.addEventListener("scroll", function (e) {
   last_known_scroll_position = window.scrollY;
@@ -107,7 +127,6 @@ window.addEventListener("scroll", function (e) {
     btnRegresar.classList.add("hide");
   }
 });
-
 
 /* Selected Card */
 card_1.addEventListener("click", () => {
@@ -119,7 +138,7 @@ card_1.addEventListener("click", () => {
 
 card_2.addEventListener("click", () => {
   card_bar_2.classList.add("card_bar_selected");
-  image_2.classList.add("image_screen_color");
+  image_2.classList.add("image_screen_colimage_height");
   cardBar(card_bar_2);
   image(image_2);
 });
@@ -159,5 +178,63 @@ function cardBar(card_bar) {
 
 function image(image) {
   const filter_image = images.filter((x) => image != x);
-  filter_image.forEach((x) => x.classList.remove("image_screen_color"));
+  filter_image.forEach((x) => {
+    x.classList.remove("image_screen_color");
+  });
+}
+
+let screen_bool = true;
+
+/* Abrir screen */
+abrir_screen_1.addEventListener("click", () => {
+  screen(screen_placeholder_1, card_1, image_1, abrir_screen_1);
+
+  if(screen_bool){
+    texto_1.innerText =
+    " Pellentesque interdum felis nunc, a aliquet odio dignissim sit amet. Proin libero nisl, lobortis quis sapien ut, egestas vulputate risus. Nullam mattis porta augue in tempus. Aenean nec erat sapien. Morbi at ex vitae nisl pharetra tincidunt. Integer porttitor condimentum nisl, nec laoreet est mattis varius. Aenean interdum, est non efficitur vehicula, quam ipsum volutpat sapien, nec finibus sem quam lacinia erat. Suspendisse at libero eget nunc pellentesque bibendum ut at erat. Donec luctus risus vitae risus porta placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut magna neque, scelerisque eget arcu ut, ornare rutrum nunc. Aliquam sodales elementum efficitur. Sed et lorem quis est sagittis pharetra eu sed arcu. Etiam vestibulum, enim et condimentum consequat, eros elit mattis nunc, et consectetur justo magna eu lacus. Phasellus malesuada hendrerit vehicula. Donec consectetur tellus vel sapien congue, quis viverra dui luctus. Aliquam id pretium odio. Praesent aliquet diam id magna elementum aliquam. Sed mollis diam id consequat ultrices. In consequat justo eget arcu ultricies finibus. Vestibulum ut lacus ex. ";
+  }else{
+    texto_1.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+  }
+  screen_bool = !screen_bool;
+});
+
+abrir_screen_2.addEventListener("click", () => {
+  screen(screen_placeholder_2, card_2, image_2, abrir_screen_2);
+  screen_bool = !screen_bool;
+});
+
+abrir_screen_3.addEventListener("click", () => {
+  screen(screen_placeholder_3, card_3, image_3, abrir_screen_3);
+  screen_bool = !screen_bool;
+});
+
+abrir_screen_4.addEventListener("click", () => {
+  screen(screen_placeholder_4, card_4, image_4, abrir_screen_4);
+  screen_bool = !screen_bool;
+});
+
+abrir_screen_5.addEventListener("click", () => {
+  screen(screen_placeholder_5, card_5, image_5, abrir_screen_5);
+  screen_bool = !screen_bool;
+});
+
+abrir_screen_6.addEventListener("click", () => {
+  screen(screen_placeholder_6, card_6, image_6, abrir_screen_6);
+  screen_bool = !screen_bool;
+});
+
+function screen(screen_placeholder, card, image, abrir_screen) {
+  if (screen_bool) {
+    screen_placeholder.classList.add("card_placeholder");
+    card.classList.add("screen_absolute");
+    image.classList.add("img_screen_absolute");
+    abrir_screen.classList.remove("fa-external-link-alt");
+    abrir_screen.classList.add("fa-times");
+  } else {
+    screen_placeholder.classList.remove("card_placeholder");
+    card.classList.remove("screen_absolute");
+    image.classList.remove("img_screen_absolute");
+    abrir_screen.classList.remove("fa-times");
+    abrir_screen.classList.add("fa-external-link-alt");
+  }
 }

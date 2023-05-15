@@ -26,6 +26,7 @@ html {
 }
 
 body {
+  position: relative;
   font-family: var(--main-font);
   display: flex;
   justify-content: center;
@@ -283,17 +284,17 @@ footer {
   align-items: center;
 }
 
-.language{
+.language {
   width: 100%;
   display: flex;
   justify-content: start;
 }
-.ul_language{
+.ul_language {
   list-style: none;
   display: flex;
 }
 
-.li_language{
+.li_language {
   margin-right: 6rem;
   margin-left: -4rem;
   font-size: 3.5rem;
@@ -301,7 +302,7 @@ footer {
   transition: all 0.2s ease-in-out;
 }
 
-.li_language:hover{
+.li_language:hover {
   color: var(--btn_primary);
 }
 
@@ -412,9 +413,18 @@ footer {
 /* CARD */
 .cards {
   display: grid;
+  grid-auto-flow: dense;
   grid-template-columns: 50% 50%;
   grid-gap: 2rem;
   padding: 3rem 0rem 3rem 0rem;
+}
+
+.card_placeholder,
+.card {
+  width: 40rem;
+  height: 30rem;
+  background-color: var(--bg-color-secondary);
+  border: 3px solid var(--black);
 }
 
 .card_bar {
@@ -449,12 +459,20 @@ footer {
   background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
 }
 
-.card_bar_selected{
+.card_bar_selected {
   background: var(--coral-pink);
 }
 
 .card_body_container {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card_body_container_links{
+  display: flex;
+  justify-content: space-between;
 }
 
 .sombra_3D {
@@ -470,16 +488,6 @@ footer {
   box-shadow: 4px 4px 0px 1px var(--color_black);
 }
 
-.card {
-  width: 40rem;
-  background-color: var(--bg-color-secondary);
-  border: 3px solid var(--black);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .image_screen_container {
   width: 100%;
   height: 10rem;
@@ -493,13 +501,18 @@ footer {
   filter: grayscale(0%);
 }
 
-.image_screen_1 {
-  background-image: url("https://picsum.photos/200");
+.image_height {
+  height: 25rem;
 }
 
-.fa-xmark {
+.image_screen_1 {
+  background-image: url("/img/gran_cerdo.png");
+}
+
+.icon_screen {
   font-size: 1.5rem;
   color: var(--black);
+  cursor: pointer;
 }
 
 /* BTN */
@@ -554,8 +567,7 @@ footer {
   color: var(--black);
   opacity: 1;
   background-size: 4px 4px;
-  background: 
-    linear-gradient(90deg, #e3dfee 0.8px, #c6c6da 0.8px) -0.4px 0;
+  background: linear-gradient(90deg, #e3dfee 0.8px, #c6c6da 0.8px) -0.4px 0;
 }
 
 .mostrar_mas {
@@ -574,20 +586,19 @@ footer {
   background-color: var(--main-color);
 }
 
-.btn_cv{
+.btn_cv {
   font-size: 1.3rem;
   color: var(--bg-color-secondary);
   background-color: var(--coral-pink);
-  
 }
 
-.btn_cv:hover{
+.btn_cv:hover {
   background-color: var(--main-color);
 }
 
-.icon_cv{
-  font-size: 1.5rem;
-  color: var(--bg-color-secondary);
+.icon_cv {
+  font-size: 2rem;
+  color: var(--floral-white);
   margin-left: 1rem;
 }
 
@@ -596,6 +607,31 @@ footer {
   display: none;
 }
 
+/* Screen */
+
+.screen_absolute{
+  height: auto;
+  position: relative;
+  width: 60rem;
+  left: 0%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 2;
+}
+
+.img_screen_absolute{
+  height: 20rem;
+}
+
+.card_placeholder{
+  background-color: var(--rose-quartz);
+}
+
+
+.fa-times{
+  font-size: 2rem;
+  color: var(--black);
+  cursor: pointer;
+}
 
 /* mobile */
 @media screen and (max-width: 1200px) {
