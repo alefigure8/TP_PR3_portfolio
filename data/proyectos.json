@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "titulo": "Gran Cerdo",
+    "texto": "Proin et fermentum metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur nec orci eu ornare. Sed non eros leo. Aliquam ornare lorem vitae lectus consequat fermentum. Nam consectetur mattis enim sed blandit. Mauris in nunc dui. Pellentesque porta ac tortor ac placerat. Sed condimentum efficitur enim, sit amet dapibus ligula facilisis nec. Donec mi tellus, elementum id consectetur sit amet, porttitor et nisl. Donec id mi quis ipsum volutpat vulputate ut ac tortor. Sed lacus risus, egestas nec nunc at, sollicitudin consectetur risus. Nunc ultrices ex ut magna condimentum, sed dapibus urna aliquam. Proin viverra a ex at porttitor. Nunc volutpat lorem at laoreet iaculis. \n\n Integer in ultricies dolor. Proin ac lacinia sem. Vivamus vitae iaculis felis, et porta urna. Donec ac efficitur nisl. Nam tempor non odio ac imperdiet. Sed erat dui, ultrices eget dignissim et, faucibus eu ex. ",
+    "portada": "/img/gran_cerdo.png",
+    "imagenes": [
+      "/img/gran_cerdo_gameplay.gif",
+      "/img/gran_cerdo.png",
+      "/img/gran_cerdo.png"
+    ],
+    "categoria": "Juego",
+    "link": "https://github.com/alefigure8/Juego---TP-Final"
+  },
+  {
+    "id": 2,
+    "titulo": "Gestion Ventas",
+    "texto": "",
+    "portada": "/img/gran_cerdo.png",
+    "imagenes": ["", "", ""],
+    "categoria": "Programa",
+    "link": "http://github.com/alefigure8/"
+  },
+  {
+    "id": 3,
+    "titulo": "Gran Cerdo 3",
+    "texto": "",
+    "portada": "/img/gran_cerdo.png",
+    "imagenes": ["", "", ""],
+    "categoria": "Juego3",
+    "link": "http://github.com/alefigure8/"
+  },
+  {
+    "id": 4,
+    "titulo": "Gran Cerdo",
+    "texto": "",
+    "portada": "/img/gran_cerdo.png",
+    "imagenes": ["", "", ""],
+    "categoria": "Juego",
+    "link": "http://github.com/alefigure8/"
+  },
+  {
+    "id": 5,
+    "titulo": "Gran Cerdo",
+    "texto": "",
+    "portada": "/img/gran_cerdo.png",
+    "imagenes": ["", "", ""],
+    "categoria": "Juego",
+    "link": "http://github.com/alefigure8/"
+  },
+  {
+    "id": 6,
+    "titulo": "Gran Cerdo",
+    "texto": "",
+    "portada": "/img/gran_cerdo.png",
+    "imagenes": ["", "", ""],
+    "categoria": "Juego",
+    "link": "http://github.com/alefigure8/"
+  }
+]
