@@ -504,10 +504,6 @@ footer {
   height: 25rem;
 }
 
-.image_screen_1 {
-  background-image: url("/img/gran_cerdo.png");
-}
-
 .icon_screen {
   font-size: 1.5rem;
   color: var(--black);

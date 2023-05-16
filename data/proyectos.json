@@ -15,7 +15,7 @@
   {
     "id": 2,
     "titulo": "Gestion Ventas",
-    "texto": "",
+    "texto": "Proin et fermentum metus. Lorem ipsum dolor sit amet",
     "portada": "/img/gran_cerdo.png",
     "imagenes": ["", "", ""],
     "categoria": "Programa",
@@ -24,7 +24,7 @@
   {
     "id": 3,
     "titulo": "Gran Cerdo 3",
-    "texto": "",
+        "texto": "Proin et fermentum metus. Lorem ipsum dolor sit amet",
     "portada": "/img/gran_cerdo.png",
     "imagenes": ["", "", ""],
     "categoria": "Juego3",
@@ -33,7 +33,7 @@
   {
     "id": 4,
     "titulo": "Gran Cerdo",
-    "texto": "",
+        "texto": "Proin et fermentum metus. Lorem ipsum dolor sit amet",
     "portada": "/img/gran_cerdo.png",
     "imagenes": ["", "", ""],
     "categoria": "Juego",
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "titulo": "Gran Cerdo",
-    "texto": "",
+        "texto": "Proin et fermentum metus. Lorem ipsum dolor sit amet",
     "portada": "/img/gran_cerdo.png",
     "imagenes": ["", "", ""],
     "categoria": "Juego",
@@ -51,7 +51,7 @@
   {
     "id": 6,
     "titulo": "Gran Cerdo",
-    "texto": "",
+        "texto": "Proin et fermentum metus. Lorem ipsum dolor sit amet",
     "portada": "/img/gran_cerdo.png",
     "imagenes": ["", "", ""],
     "categoria": "Juego",

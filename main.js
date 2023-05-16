@@ -1,14 +1,64 @@
 const apiUrl = "./data/proyectos.json";
-let jsondata;
 
+/* Traer datos desde json */
 async function getJson(url) {
   let response = await fetch(url);
   let data = await response.json();
   return data;
 }
 
+/* Crear cada card dependiendo el json */
+async function crearCards(jsondata) {
+  const cardsBody = document.getElementById("cards");
+
+  for (let i = 0; i < jsondata.length; i++) {
+    cardsBody.innerHTML += `
+        <div id="screen_placeholder_${i + 1}" class="screen_placeholder">
+            <div class="card sombra" id="card_${i + 1}">
+                <div class="card_bar" id="card_bar_${i + 1}">
+                    <div class="circulos_screen">
+                        <div class="circulo_blanco_screen"></div>
+                        <div class="circulo_blanco_screen"></div>
+                    </div>
+                    <p class="titulo_3">${jsondata[i].categoria}</p>
+                    <div class="cruz">
+                        <i
+                        class="fas fa-external-link-alt icon_screen"
+                        id="abrir_screen_${i + 1}"
+                        ></i>
+                    </div>
+                    </div>
+                    <div class="card_body">
+                    <div
+                        class="image_screen_${i + 1} image_screen_container"
+                        id="image_${i + 1}"
+                    ></div>
+                    <div class="card_body_container" id="card_body_container_${
+                      i + 1
+                    }">
+                        <p class="titulo_4">${jsondata[i].titulo}</p>
+                        <p class="parrafo_2">
+                        ${jsondata[i].texto.substring(0, 100)}
+                        </p>
+                        <div class="card_body_container_links">
+                        <a class="btn btn_screen" href="#" class="link"
+                            >Ampliar</a
+                        >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+  }
+}
+
 async function main() {
-  jsondata = await getJson(apiUrl);
+  /* Llamamos los datos del json*/
+  const jsondata = await getJson(apiUrl);
+
+  /* Creamos cada una de las cards*/
+  await crearCards(jsondata);
 
   /* Variables Secciones*/
   const section_1 = document.getElementById("section_1");
@@ -24,143 +74,67 @@ async function main() {
   const cerrar = document.getElementById("cerrar");
   const abrir = document.getElementById("abrir");
 
-  /* Variables card */
-  const cardsBody = document.getElementById("cards");
-  const card_1 = document.getElementById("card_1");
-  const card_2 = document.getElementById("card_2");
-  const card_3 = document.getElementById("card_3");
-  const card_4 = document.getElementById("card_4");
-  const card_5 = document.getElementById("card_5");
-  const card_6 = document.getElementById("card_6");
-  const footer = document.getElementById("footer");
+  /* Listar id card */
+  const cards = [];
+  for (let i = 0; i < jsondata.length; i++) {
+    cards.push(document.getElementById(`card_${i + 1}`));
 
-  const card_bar_1 = document.getElementById("card_bar_1");
-  const card_bar_2 = document.getElementById("card_bar_2");
-  const card_bar_3 = document.getElementById("card_bar_3");
-  const card_bar_4 = document.getElementById("card_bar_4");
-  const card_bar_5 = document.getElementById("card_bar_5");
-  const card_bar_6 = document.getElementById("card_bar_6");
+    cards[i].addEventListener("click", () => {
+      card_bars[i].classList.add("card_bar_selected");
+      images[i].classList.add("image_screen_color");
+      cardBar(card_bars[i]);
+      image(images[i]);
+    });
+  }
 
-  const image_1 = document.getElementById("image_1");
-  const image_2 = document.getElementById("image_2");
-  const image_3 = document.getElementById("image_3");
-  const image_4 = document.getElementById("image_4");
-  const image_5 = document.getElementById("image_5");
-  const image_6 = document.getElementById("image_6");
+  /* Listar id card_bar */
+  const card_bars = [];
+  for (let i = 0; i < jsondata.length; i++) {
+    card_bars.push(document.getElementById(`card_bar_${i + 1}`));
+  }
 
-  const texto_1 = document.getElementById("texto_1");
-  const texto_2 = document.getElementById("texto_2");
-  const texto_3 = document.getElementById("texto_3");
-  const texto_4 = document.getElementById("texto_4");
-  const texto_5 = document.getElementById("texto_5");
-  const texto_6 = document.getElementById("texto_6");
+  /* Listar id image */
+  const images = [];
+  for (let i = 0; i < jsondata.length; i++) {
+    images.push(document.getElementById(`image_${i + 1}`));
+  }
 
-  const titulo_1 = document.getElementById("titulo_1");
-  const titulo_2 = document.getElementById("titulo_2");
-  const titulo_3 = document.getElementById("titulo_3");
-  const titulo_4 = document.getElementById("titulo_4");
-  const titulo_5 = document.getElementById("titulo_5");
-  const titulo_6 = document.getElementById("titulo_6");
-
-  const categoria_1 = document.getElementById("categoria_1");
-  const categoria_2 = document.getElementById("categoria_2");
-  const categoria_3 = document.getElementById("categoria_3");
-  const categoria_4 = document.getElementById("categoria_4");
-  const categoria_5 = document.getElementById("categoria_5");
-  const categoria_6 = document.getElementById("categoria_6");
-
+  /* Listar id screen_placeholder */
   const screen_placeholder_1 = document.getElementById("screen_placeholder_1");
 
-  const abrir_screen_1 = document.getElementById("abrir_screen_1");
-  const abrir_screen_2 = document.getElementById("abrir_screen_2");
-  const abrir_screen_3 = document.getElementById("abrir_screen_3");
-  const abrir_screen_4 = document.getElementById("abrir_screen_4");
-  const abrir_screen_5 = document.getElementById("abrir_screen_5");
-  const abrir_screen_6 = document.getElementById("abrir_screen_6");
+  /* Variable para abrir y cerrar screens*/
+  let screen_bool = true;
 
-  const card_body_container_1 = document.getElementById(
-    "card_body_container_1"
-  );
-  const card_body_container_2 = document.getElementById(
-    "card_body_container_2"
-  );
-  const card_body_container_3 = document.getElementById(
-    "card_body_container_3"
-  );
-  const card_body_container_4 = document.getElementById(
-    "card_body_container_4"
-  );
-  const card_body_container_5 = document.getElementById(
-    "card_body_container_5"
-  );
-  const card_body_container_6 = document.getElementById(
-    "card_body_container_6"
-  );
+  /* Listar id abrir_screen */
+  const abrir_screens = [];
+  for (let i = 0; i < jsondata.length; i++) {
+    abrir_screens.push(document.getElementById(`abrir_screen_${i + 1}`));
 
-  const titulos = [
-    titulo_1,
-    titulo_2,
-    titulo_3,
-    titulo_4,
-    titulo_5,
-    titulo_6,
-  ];
+    /* Crear evento */
+    abrir_screens[i].addEventListener("click", () => {
+      screen(screen_placeholder_1, cards[i], images[i], abrir_screens[i]);
+      cargarDataEntrada(i);
+      screen_bool = !screen_bool;
+    });
+  }
 
-  const cards_body_container = [
-    card_body_container_1,
-    card_body_container_2,
-    card_body_container_3,
-    card_body_container_4,
-    card_body_container_5,
-    card_body_container_6,
-  ];
+  /* Listar id card_body_container */
+  const cards_body_container = [];
+  for (let i = 0; i < jsondata.length; i++) {
+    cards_body_container.push(
+      document.getElementById(`card_body_container_${i + 1}`)
+    );
+  }
 
-  const textos = [texto_1, texto_2, texto_3, texto_4, texto_5, texto_6];
-
-  const cards = [card_1, card_2, card_3, card_4, card_5, card_6];
-
-  const categorias = [
-    categoria_1,
-    categoria_2,
-    categoria_3,
-    categoria_4,
-    categoria_5,
-    categoria_6,
-  ];
-
-  const card_bars = [
-    card_bar_1,
-    card_bar_2,
-    card_bar_3,
-    card_bar_4,
-    card_bar_5,
-    card_bar_6,
-  ];
-
-  const images = [image_1, image_2, image_3, image_4, image_5, image_6];
-
-  const screen_cards = [
-    abrir_screen_1,
-    abrir_screen_2,
-    abrir_screen_3,
-    abrir_screen_4,
-    abrir_screen_5,
-    abrir_screen_6,
-  ];
-
-  /* Cargar info de cards cerrados*/
+  /* Agregar portadas*/
   for (let i = 0; i < jsondata.length; i++) {
     images[i].style.backgroundImage = `url(${jsondata[i].portada})`;
-    textos[i].innerText = jsondata[i].texto.substring(0, 100) + "...";
-    categorias[i].innerText = jsondata[i].categoria;
-    titulos[i].innerText = jsondata[i].titulo;
   }
 
   /* Esconder cards */
-  card_3.classList.add("hide");
-  card_4.classList.add("hide");
-  card_5.classList.add("hide");
-  card_6.classList.add("hide");
+  for (let i = 2; i < cards.length; i++) {
+    cards[i].classList.add("hide");
+  }
 
   /* Ir a cada seccion */
   inicio.addEventListener("click", () => {
@@ -193,10 +167,9 @@ async function main() {
   });
 
   mostrar_mas.addEventListener("click", () => {
-    card_3.classList.toggle("hide");
-    card_4.classList.toggle("hide");
-    card_5.classList.toggle("hide");
-    card_6.classList.toggle("hide");
+    for (let i = 2; i < jsondata.length; i++) {
+      cards[i].classList.toggle("hide");
+    }
     mostrar_mas.innerText =
       mostrar_mas.innerText == "Mostrar más" ? "Mostrar menos" : "Mostrar más";
   });
@@ -211,99 +184,19 @@ async function main() {
     }
   });
 
-  /* Selected Card */
-  card_1.addEventListener("click", () => {
-    card_bar_1.classList.add("card_bar_selected");
-    image_1.classList.add("image_screen_color");
-    cardBar(card_bar_1);
-    image(image_1);
-  });
-
-  card_2.addEventListener("click", () => {
-    card_bar_2.classList.add("card_bar_selected");
-    image_2.classList.add("image_screen_color");
-    cardBar(card_bar_2);
-    image(image_2);
-  });
-
-  card_3.addEventListener("click", () => {
-    card_bar_3.classList.add("card_bar_selected");
-    image_3.classList.add("image_screen_color");
-    cardBar(card_bar_3);
-    image(image_3);
-  });
-
-  card_4.addEventListener("click", () => {
-    card_bar_4.classList.add("card_bar_selected");
-    image_4.classList.add("image_screen_color");
-    cardBar(card_bar_4);
-    image(image_4);
-  });
-
-  card_5.addEventListener("click", () => {
-    card_bar_5.classList.add("card_bar_selected");
-    image_5.classList.add("image_screen_color");
-    cardBar(card_bar_5);
-    image(image_5);
-  });
-
-  card_6.addEventListener("click", () => {
-    card_bar_6.classList.add("card_bar_selected");
-    image_6.classList.add("image_screen_color");
-    cardBar(card_bar_6);
-    image(image_6);
-  });
-
+  /* Funcion para coloreas barra de ventana */
   function cardBar(card_bar) {
     const filter_cards = card_bars.filter((x) => card_bar != x);
     filter_cards.forEach((x) => x.classList.remove("card_bar_selected"));
   }
 
+  /* Funcion para sacar filtro*/
   function image(image) {
     const filter_image = images.filter((x) => image != x);
     filter_image.forEach((x) => {
       x.classList.remove("image_screen_color");
     });
   }
-
-  let screen_bool = true;
-
-  /* Abrir screen */
-  abrir_screen_1.addEventListener("click", () => {
-    screen(screen_placeholder_1, card_1, image_1, abrir_screen_1);
-    cargarDataEntrada(0);
-    screen_bool = !screen_bool;
-  });
-
-  abrir_screen_2.addEventListener("click", () => {
-    screen(screen_placeholder_2, card_2, image_2, abrir_screen_2);
-    cargarDataEntrada(1);
-    screen_bool = !screen_bool;
-  });
-
-  abrir_screen_3.addEventListener("click", () => {
-    screen(screen_placeholder_3, card_3, image_3, abrir_screen_3);
-    cargarDataEntrada(2);
-    screen_bool = !screen_bool;
-  });
-
-  abrir_screen_4.addEventListener("click", () => {
-    screen(screen_placeholder_4, card_4, image_4, abrir_screen_4);
-    cargarDataEntrada(3);
-    screen_bool = !screen_bool;
-  });
-
-  abrir_screen_5.addEventListener("click", () => {
-    screen(screen_placeholder_5, card_5, image_5, abrir_screen_5);
-    cargarDataEntrada(4);
-    screen_bool = !screen_bool;
-  });
-
-  abrir_screen_6.addEventListener("click", () => {
-    screen(screen_placeholder_6, card_6, image_6, abrir_screen_6);
-    cargarDataEntrada(5);
-    screen_bool = !screen_bool;
-  });
 
   /* Abrir y Cerrar screen */
   function screen(screen_placeholder, card, image, abrir_screen) {
@@ -323,23 +216,37 @@ async function main() {
   }
 
   /* Cargar data de entrada */
-  function cargarDataEntrada(id){
+  function cargarDataEntrada(id) {
     if (screen_bool) {
       cards_body_container[id].innerHTML = "";
-      cards_body_container[id].innerHTML += `<p class="titulo_4" id="titulo_1">${jsondata[id].titulo}</p>`;
-      cards_body_container[id].innerHTML += `<p class="card_body_container_text">${jsondata[id].texto}</p>`;
-      cards_body_container[id].innerHTML += `<img src=\"${jsondata[id].imagenes[0]}" class="imagen_entrada">`;
-      cards_body_container[id].innerHTML += `<div class="card_body_container_links"><a class="btn btn_screen" href="${jsondata[id].link}" target="_blank" class="link">Ver proyecto</a>;
+      cards_body_container[
+        id
+      ].innerHTML += `<p class="titulo_4">${jsondata[id].titulo}</p>`;
+      cards_body_container[
+        id
+      ].innerHTML += `<p class="card_body_container_text">${jsondata[id].texto}</p>`;
+      cards_body_container[
+        id
+      ].innerHTML += `<img src=\"${jsondata[id].imagenes[0]}" class="imagen_entrada">`;
+      cards_body_container[
+        id
+      ].innerHTML += `<div class="card_body_container_links"><a class="btn btn_screen" href="${jsondata[id].link}" target="_blank" class="link">Ver proyecto</a>;
     </div>`;
     } else {
       cards_body_container[id].innerText = "";
-      cards_body_container[id].innerHTML += `<p class="titulo_4" id="titulo_1">${jsondata[id].titulo}</p>`;
-      cards_body_container[id].innerHTML += `<p class="card_body_container_text">${jsondata[id].texto.substring( 0, 100 )}...</p>`;
-      cards_body_container[id].innerHTML += `<div class="card_body_container_links"><a class="btn btn_screen" href="#" class="link">Ampliar</a>;`
-   }
+      cards_body_container[
+        id
+      ].innerHTML += `<p class="titulo_4">${jsondata[id].titulo}</p>`;
+      cards_body_container[
+        id
+      ].innerHTML += `<p class="card_body_container_text">${jsondata[
+        id
+      ].texto.substring(0, 100)}...</p>`;
+      cards_body_container[
+        id
+      ].innerHTML += `<div class="card_body_container_links"><a class="btn btn_screen" href="#" class="link">Ampliar</a>;`;
+    }
   }
-
-
 }
 
 main();
