@@ -38,7 +38,7 @@ async function crearCards(jsondata) {
                     }">
                         <p class="titulo_4">${jsondata[i].titulo}</p>
                         <p class="parrafo_2">
-                        ${jsondata[i].texto.substring(0, 100)}
+                        ${jsondata[i].texto.substring(0, 100)}...
                         </p>
                         <div class="card_body_container_links">
                         <a class="btn btn_screen" class="link"
@@ -273,7 +273,7 @@ async function main() {
       ].innerHTML += `<img src=\"${jsondata[id].imagenes[1]}" class="imagen_entrada">`;
       cards_body_container[
         id
-      ].innerHTML += `<img src=\"${jsondata[id].imagenes[3]}" class="imagen_entrada">`;
+      ].innerHTML += `<img src=\"${jsondata[id].imagenes[2]}" class="imagen_entrada">`;
       cards_body_container[
         id
       ].innerHTML += `<div class="card_body_container_links"><a class="btn btn_screen link" href="${jsondata[id].link}" target="_blank">Ver proyecto</a></div>`;
