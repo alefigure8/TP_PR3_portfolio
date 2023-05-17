@@ -82,9 +82,7 @@
             <div class="sobre_mi">
               <div class="sobre_mi_container">
                 <h2 class="titulo_2">Ale Gomez Nieto</h2>
-                <p class="parrafo_1">
-                  Desarrollador Backend Junior
-                </p>
+                <p class="parrafo_1">Desarrollador Backend Junior</p>
                 <div class="language">
                   <ul class="ul_language">
                     <li class="li_language">
@@ -109,7 +107,9 @@
                     >Bajar CV
                     <i class="fa-solid fa-cloud-arrow-down icon_cv"></i
                   ></a>
-                  <a class="btn sombra_3D btn_sobre_mi" id="btn_sobre_mi">Sobre mí</a>
+                  <a class="btn sombra_3D btn_sobre_mi" id="btn_sobre_mi"
+                    >Sobre mí</a
+                  >
                 </div>
               </div>
             </div>
@@ -124,7 +124,7 @@
               <!-- CARD DESDE JS -->
             </div>
             <div class="mostrar_mas">
-              <a href="#" class="btn btn_mostrar_mas sombra_3D" id="mostrar_mas"
+              <a class="btn btn_mostrar_mas sombra_3D" id="mostrar_mas"
                 >Mostrar más</a
               >
             </div>
@@ -135,18 +135,46 @@
               <i class="fa-solid fa-terminal"></i>
               <p class="titulo_5 text">Contacto</p></span
             >
+            <div class="formulario sombra_3D">
+              <div class="formulario_bar">
+                <p><i class="fas fa-comment-alt"></i></p>
+                <i class="fas fa-times"></i>
+              </div>
+              <div class="formulario_control">
+                <input type="text" id="nombre" placeholder="Nombre" required />
+              </div>
+              <div class="formulario_control">
+                <input type="email" id="mail" placeholder="E-Mail" required />
+              </div>
+              <div class="formulario_control">
+                <textarea
+                  name="mensaje"
+                  id="mensaje"
+                  cols="30"
+                  rows="10"
+                  placeholder="Mensaje"
+                ></textarea>
+              </div>
+
+              <a class="btn sombra_3D btn_formulario" id="btn_sobre_mi"
+                >Enviar</a
+              >
+            </div>
           </section>
         </div>
         <footer id="footer">
           <ul class="ul_footer">
             <li class="li_footer">
-              <i class="fa-brands fa-github"></i>
+              <a href="http://github.com/alefigure8" target="_blank"><i class="fa-brands fa-github"></i></a>
             </li>
             <li class="li_footer">
-              <i class="fa-brands fa-instagram"></i>
+              <a href="https://www.linkedin.com/in/alejandro-gomez-nieto/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </li>
             <li class="li_footer">
-              <i class="fa-brands fa-twitter"></i>
+              <a href="http://instagram.com/alegomeznieto" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="li_footer">
+              <a href="http://twitter.com/alegomeznieto" target="_blank"><i class="fa-brands fa-twitter"></i></a>
             </li>
           </ul>
         </footer>
@@ -207,14 +235,21 @@
         <div class="card_body">
           <div class="card_body_container">
             <div
-            class="image_screen_sobre_mi image_screen_container_sobre_mi"
+              class="image_screen_sobre_mi image_screen_container_sobre_mi"
             ></div>
-            <p class="titulo_3 mt-10">
-              Hola!
+            <p class="titulo_3 mt-10">¿Quién soy?</p>
+            <p>
+              ¡Hola! Soy Alejandro Gomez Nieto, estudiante de UTN y
+              desarrollador Backend. Me apasiona el mundo de la tecnología y la
+              programación. Utilizo lenguajes como C#, C++, Javascript, NodeJS y
+              SQL para crear soluciones eficientes. Estoy comprometido con
+              ofrecer resultados de alta calidad y trabajar en equipo para
+              lograr el éxito en cada proyecto. Mi enfoque está en el desarrollo
+              de aplicaciones web y software (con un poquito de viedeo juegos).
+              Siempre estoy aprendiendo y actualizándome para estar al tanto de
+              las últimas tendencias. ¡Estoy emocionado de enfrentar nuevos
+              desafíos!
             </p>
-            <p>Soy un desarrolador backend viviendo en Argentina, apasionado por desarrollar aplicaciones que me exijan continuar aprendiendo. Trabajo con Nodejs, Express, MySQL, MongoDB y Firebase, utilizando en muchos de los proyectos Jaison Web Token, passport, Auth0, como también GraphQL. En el frontend trabajo con React, NextJS, Styled Components, Material UI, Chakra, Bootstrap, Tailwind, etc.
-              Actualmente estoy realizando la carrera de Técnico Universitario en Programación en la Universidad Tecnológica Nacional. </p>
-
           </div>
         </div>
       </div>

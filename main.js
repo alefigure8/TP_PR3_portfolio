@@ -171,7 +171,7 @@ async function main() {
   }
 
   /* Esconder cards */
-  for (let i = 2; i < cards.length; i++) {
+  for (let i = 4; i < cards.length; i++) {
     cards[i].classList.add("hide");
   }
 
@@ -206,7 +206,7 @@ async function main() {
   });
 
   mostrar_mas.addEventListener("click", () => {
-    for (let i = 2; i < jsondata.length; i++) {
+    for (let i = 4; i < jsondata.length; i++) {
       cards[i].classList.toggle("hide");
     }
     mostrar_mas.innerText =
