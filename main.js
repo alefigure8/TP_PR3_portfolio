@@ -42,7 +42,7 @@ async function crearCards(jsondata) {
                         </p>
                         <div class="card_body_container_links">
                         <a class="btn btn_screen" href="#" class="link"
-                            >Ampliar</a
+                            id="ampliar_${i+1}">Ampliar</a
                         >
                         </div>
                     </div>
@@ -73,6 +73,13 @@ async function main() {
   const mostrar_mas = document.getElementById("mostrar_mas");
   const cerrar = document.getElementById("cerrar");
   const abrir = document.getElementById("abrir");
+  const icon_screen = document.getElementById("icon_screen");
+  const version = document.getElementById("version");
+  const abrir_version = document.getElementById("abrir_version");
+
+  const icon_screen_sobre_mi = document.getElementById("icon_screen_sobre_mi");
+  const version_sobre_mi = document.getElementById("version_sobre_mi");
+  const btn_sobre_mi = document.getElementById("btn_sobre_mi");
 
   /* Listar id card */
   const cards = [];
@@ -99,8 +106,13 @@ async function main() {
     images.push(document.getElementById(`image_${i + 1}`));
   }
 
+  const screen_placeholders = [];
   /* Listar id screen_placeholder */
-  const screen_placeholder_1 = document.getElementById("screen_placeholder_1");
+  for (let i = 0; i < jsondata.length; i++) {
+    const screen_placeholder = document.getElementById(`screen_placeholder_${i + 1}`);
+    screen_placeholders.push(screen_placeholder);
+  }
+
 
   /* Variable para abrir y cerrar screens*/
   let screen_bool = true;
@@ -112,7 +124,7 @@ async function main() {
 
     /* Crear evento */
     abrir_screens[i].addEventListener("click", () => {
-      screen(screen_placeholder_1, cards[i], images[i], abrir_screens[i]);
+      screen(screen_placeholders[i], cards[i], images[i], abrir_screens[i]);
       cargarDataEntrada(i);
       screen_bool = !screen_bool;
     });
@@ -125,6 +137,20 @@ async function main() {
       document.getElementById(`card_body_container_${i + 1}`)
     );
   }
+
+  /* Listar id btn_screen */
+  const btn_screens = [];
+  for (let i = 0; i < jsondata.length; i++) {
+    btn_screens.push(document.getElementById(`ampliar_${i + 1}`));
+
+    /* Crear evento */
+    btn_screens[i].addEventListener("click", () => {
+      screen(screen_placeholders[i], cards[i], images[i], abrir_screens[i]);
+      cargarDataEntrada(i);
+      screen_bool = !screen_bool;
+    });
+  }
+
 
   /* Agregar portadas*/
   for (let i = 0; i < jsondata.length; i++) {
@@ -247,6 +273,24 @@ async function main() {
       ].innerHTML += `<div class="card_body_container_links"><a class="btn btn_screen" href="#" class="link">Ampliar</a>;`;
     }
   }
+
+  /* Eventos ventana version */
+  icon_screen.addEventListener("click", () => {
+    version.classList.add("hide");
+  });
+
+  abrir_version.addEventListener("click", () => {
+    version.classList.remove("hide");
+  });
+
+  /* Eventos ventana version */
+  icon_screen_sobre_mi.addEventListener("click", () => {
+    version_sobre_mi.classList.add("hide");
+  });
+
+  btn_sobre_mi.addEventListener("click", () => {
+    version_sobre_mi.classList.remove("hide");
+  });
 }
 
 main();

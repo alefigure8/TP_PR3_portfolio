@@ -67,7 +67,7 @@
           </div>
           <div class="circulos_containter">
             <ul class="circulos">
-              <li class="circulo_negro"></li>
+              <li class="circulo_negro" id="abrir_version"></li>
               <li class="circulo_blanco" id="abrir"></li>
               <li class="circulo_blanco" id="cerrar"></li>
             </ul>
@@ -83,8 +83,7 @@
               <div class="sobre_mi_container">
                 <h2 class="titulo_2">Ale Gomez Nieto</h2>
                 <p class="parrafo_1">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fugit, a.
+                  Desarrollador Backend Junior
                 </p>
                 <div class="language">
                   <ul class="ul_language">
@@ -105,9 +104,13 @@
                     </li>
                   </ul>
                 </div>
-                <a class="btn sombra_3D btn_cv"
-                  >Bajar CV <i class="fa-solid fa-cloud-arrow-down icon_cv"></i
-                ></a>
+                <div class="btn_perfil">
+                  <a class="btn sombra_3D btn_cv"
+                    >Bajar CV
+                    <i class="fa-solid fa-cloud-arrow-down icon_cv"></i
+                  ></a>
+                  <a class="btn sombra_3D btn_sobre_mi" id="btn_sobre_mi">Sobre mí</a>
+                </div>
               </div>
             </div>
           </section>
@@ -150,10 +153,73 @@
       </div>
     </div>
 
+    <!-- BOTON REGRESAR -->
     <div class="regresar" id="btnRegresar">
       <i class="fa-sharp fa-solid fa-arrow-up"></i>
     </div>
+    <!-- BOTON REGRESAR -->
 
+    <!-- MODAL VERSION -->
+    <div class="version hide" id="version">
+      <div class="card sombra h-50">
+        <div class="card_bar card_bar_version">
+          <div class="circulos_screen">
+            <div class="circulo_blanco_screen"></div>
+            <div class="circulo_blanco_screen"></div>
+          </div>
+          <p class="titulo_3">Versión 1.0.0</p>
+          <div class="cruz">
+            <i class="fas fa-times icon_screen" id="icon_screen"></i>
+          </div>
+        </div>
+        <div class="card_body">
+          <div class="card_body_container">
+            <img src="/img/404.gif" alt="" class="image_version" />
+            <p class="titulo_3 mt-10">
+              Realizado para la materia Programación III
+            </p>
+            <p class="bold t-center mt-10">Universidad Tecnológica Nacional</p>
+            <p class="titulo_3">Facultad Regional Pacheco</p>
+            <p class="titulo_3">Técnico Universitario en Programación</p>
+            <p class="titulo_3">2023</p>
+            <p class="bold mt-10">Profesores:</p>
+            <p>Maximiliano Sar Fernandez</p>
+            <p>Regina Laurentino Goncalves</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL VERSION -->
+
+    <!-- MODAL SOBRE MI -->
+    <div class="version hide" id="version_sobre_mi">
+      <div class="card sombra h-60">
+        <div class="card_bar card_bar_version">
+          <div class="circulos_screen">
+            <div class="circulo_blanco_screen"></div>
+            <div class="circulo_blanco_screen"></div>
+          </div>
+          <p class="titulo_3">Sobre mí</p>
+          <div class="cruz">
+            <i class="fas fa-times icon_screen" id="icon_screen_sobre_mi"></i>
+          </div>
+        </div>
+        <div class="card_body">
+          <div class="card_body_container">
+            <div
+            class="image_screen_sobre_mi image_screen_container_sobre_mi"
+            ></div>
+            <p class="titulo_3 mt-10">
+              Hola!
+            </p>
+            <p>Soy un desarrolador backend viviendo en Argentina, apasionado por desarrollar aplicaciones que me exijan continuar aprendiendo. Trabajo con Nodejs, Express, MySQL, MongoDB y Firebase, utilizando en muchos de los proyectos Jaison Web Token, passport, Auth0, como también GraphQL. En el frontend trabajo con React, NextJS, Styled Components, Material UI, Chakra, Bootstrap, Tailwind, etc.
+              Actualmente estoy realizando la carrera de Técnico Universitario en Programación en la Universidad Tecnológica Nacional. </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL SOBRE MI -->
     <script src="main.js"></script>
   </body>
 </html>
