@@ -268,7 +268,12 @@ async function main() {
       cards_body_container[
         id
       ].innerHTML += `<img src=\"${jsondata[id].imagenes[0]}" class="imagen_entrada">`;
-  
+      cards_body_container[
+        id
+      ].innerHTML += `<img src=\"${jsondata[id].imagenes[1]}" class="imagen_entrada">`;
+      cards_body_container[
+        id
+      ].innerHTML += `<img src=\"${jsondata[id].imagenes[3]}" class="imagen_entrada">`;
       cards_body_container[
         id
       ].innerHTML += `<div class="card_body_container_links"><a class="btn btn_screen link" href="${jsondata[id].link}" target="_blank">Ver proyecto</a></div>`;
