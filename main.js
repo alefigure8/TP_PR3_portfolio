@@ -41,7 +41,7 @@ async function crearCards(jsondata) {
                         ${jsondata[i].texto.substring(0, 100)}
                         </p>
                         <div class="card_body_container_links">
-                        <a class="btn btn_screen" href="#" class="link"
+                        <a class="btn btn_screen" class="link"
                             id="ampliar_${i+1}">Ampliar</a
                         >
                         </div>
@@ -113,6 +113,13 @@ async function main() {
     screen_placeholders.push(screen_placeholder);
   }
 
+    /* Listar id card_body_container */
+    const cards_body_container = [];
+    for (let i = 0; i < jsondata.length; i++) {
+      cards_body_container.push(
+        document.getElementById(`card_body_container_${i + 1}`)
+      );
+    }
 
   /* Variable para abrir y cerrar screens*/
   let screen_bool = true;
@@ -130,14 +137,6 @@ async function main() {
     });
   }
 
-  /* Listar id card_body_container */
-  const cards_body_container = [];
-  for (let i = 0; i < jsondata.length; i++) {
-    cards_body_container.push(
-      document.getElementById(`card_body_container_${i + 1}`)
-    );
-  }
-
   /* Listar id btn_screen */
   const btn_screens = [];
   for (let i = 0; i < jsondata.length; i++) {
@@ -149,6 +148,20 @@ async function main() {
       cargarDataEntrada(i);
       screen_bool = !screen_bool;
     });
+  }
+
+  function crearEventos(){
+    const btn_screens = [];
+    for (let i = 0; i < jsondata.length; i++) {
+      btn_screens.push(document.getElementById(`ampliar_${i + 1}`));
+  
+      /* Crear evento */
+      btn_screens[i].addEventListener("click", () => {
+        screen(screen_placeholders[i], cards[i], images[i], abrir_screens[i]);
+        cargarDataEntrada(i);
+        screen_bool = !screen_bool;
+      });
+    }
   }
 
 
@@ -244,6 +257,7 @@ async function main() {
   /* Cargar data de entrada */
   function cargarDataEntrada(id) {
     if (screen_bool) {
+      card_bars[id].classList.add("card_bar_resize");
       cards_body_container[id].innerHTML = "";
       cards_body_container[
         id
@@ -254,11 +268,12 @@ async function main() {
       cards_body_container[
         id
       ].innerHTML += `<img src=\"${jsondata[id].imagenes[0]}" class="imagen_entrada">`;
+  
       cards_body_container[
         id
-      ].innerHTML += `<div class="card_body_container_links"><a class="btn btn_screen" href="${jsondata[id].link}" target="_blank" class="link">Ver proyecto</a>;
-    </div>`;
+      ].innerHTML += `<div class="card_body_container_links"><a class="btn btn_screen link" href="${jsondata[id].link}" target="_blank">Ver proyecto</a></div>`;
     } else {
+      card_bars[id].classList.remove("card_bar_resize");
       cards_body_container[id].innerText = "";
       cards_body_container[
         id
@@ -270,7 +285,9 @@ async function main() {
       ].texto.substring(0, 100)}...</p>`;
       cards_body_container[
         id
-      ].innerHTML += `<div class="card_body_container_links"><a class="btn btn_screen" href="#" class="link">Ampliar</a>;`;
+      ].innerHTML += `<div class="card_body_container_links"><a class="btn btn_screen link" id="ampliar_${id + 1}">Ampliar</a></div>`;
+
+      crearEventos();
     }
   }
 

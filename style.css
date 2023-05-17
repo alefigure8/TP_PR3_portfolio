@@ -147,7 +147,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 0.3rem;
+  margin-left: 1rem;
 }
 
 .circulo_negro {
@@ -455,7 +455,7 @@ footer {
   height: 3rem;
   display: grid;
   align-items: center;
-  grid-template-columns: 7% 86% 7%;
+  grid-template-columns: 10% 80% 10%;
   opacity: 1;
   background: radial-gradient(
       circle,
@@ -477,6 +477,10 @@ footer {
     linear-gradient(#e3dfee 0.8px, transparent 0.8px) 0 -0.4px,
     linear-gradient(90deg, #e3dfee 0.8px, #e5e5f7 0.8px) -0.4px 0;
   background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+}
+
+.card_bar_resize{
+  grid-template-columns: 7% 86% 7%;
 }
 
 .card_bar_selected {
@@ -649,8 +653,9 @@ footer {
   height: auto;
   position: absolute;
   width: 60rem;
+
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%, -50%);
   z-index: 2;
 }
 
@@ -684,8 +689,9 @@ footer {
 .version{
   position: absolute;
   /* centrar */
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(30%);
+  transform: translate(-50%, -50%);
   z-index: 2 ;
 }
 
@@ -695,6 +701,12 @@ footer {
 
 .card_bar_version{
   background-color: var(--chinese-violet-3);
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* modal sobre mi */
