@@ -286,7 +286,7 @@ footer {
 }
 
 .imagen_perfil {
-  background-image: url("/img/perfil_2.png");
+  background-image: url("./img/perfil_2.png");
   background-size: cover;
   background-position: center;
   width: 20rem;
@@ -296,7 +296,7 @@ footer {
 }
 
 .image_screen_sobre_mi{
-  background-image: url("/img/perfil_3.jpg");
+  background-image: url("./img/perfil_3.jpg");
 }
 
 .sobre_mi {
