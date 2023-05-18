@@ -729,7 +729,7 @@ footer {
   align-items: center;
   background-color: var(--pale-dogwood);
   width: 60rem;
-  height: 55rem;
+
   margin: 2rem auto 0 auto;  
   border: 3px solid var(--black);
   border-radius: 1rem;
@@ -740,7 +740,7 @@ footer {
   display: flex;
   flex-direction: column;
   width: 60%;
-  margin: 5rem auto 2rem auto;
+  margin: 2rem auto 2rem auto;
   
 }
 
@@ -778,6 +778,7 @@ footer {
 }
 
 .btn_formulario{
+  margin: 0 0 3rem 0;
   background-color: var(--btn_primary);
   color: var(--bg-color-secondary);
 }
@@ -802,12 +803,23 @@ footer {
   margin-right: 2rem;
 }
 
+.formulario_control p{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.formulario_control i{
+ margin-right: 1rem;
+}
+
 .fa-comment-alt{
   color: var(--color_black);
   font-size: 2rem;
   font-weight: bold;
   margin-left:2rem;
 }
+
 
 /* mobile */
 @media screen and (max-width: 1200px) {

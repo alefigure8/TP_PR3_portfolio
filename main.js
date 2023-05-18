@@ -42,7 +42,7 @@ async function crearCards(jsondata) {
                         </p>
                         <div class="card_body_container_links">
                         <a class="btn btn_screen" class="link"
-                            id="ampliar_${i+1}">Ampliar</a
+                            id="ampliar_${i + 1}">Ampliar</a
                         >
                         </div>
                     </div>
@@ -68,6 +68,18 @@ async function main() {
   const proyecto = document.getElementById("proyecto");
   const contacto = document.getElementById("contacto");
 
+  /* Variables Formulario */
+  const nombre = document.getElementById("nombre");
+  const email = document.getElementById("email");
+  const mensaje = document.getElementById("mensaje");
+  const modal_error = document.getElementById("modal_error");
+  const icon_screen_error = document.getElementById("icon_screen_error");
+
+  const errors = [];
+  for (let i = 0; i < 3; i++) {
+    errors.push(document.getElementById(`error_${i + 1}`));
+  }
+
   /* Variable botones*/
   const btnRegresar = document.getElementById("btnRegresar");
   const mostrar_mas = document.getElementById("mostrar_mas");
@@ -76,10 +88,10 @@ async function main() {
   const icon_screen = document.getElementById("icon_screen");
   const version = document.getElementById("version");
   const abrir_version = document.getElementById("abrir_version");
-
   const icon_screen_sobre_mi = document.getElementById("icon_screen_sobre_mi");
   const version_sobre_mi = document.getElementById("version_sobre_mi");
   const btn_sobre_mi = document.getElementById("btn_sobre_mi");
+  const btn_formulario = document.getElementById("btn_formulario");
 
   /* Listar id card */
   const cards = [];
@@ -109,17 +121,19 @@ async function main() {
   const screen_placeholders = [];
   /* Listar id screen_placeholder */
   for (let i = 0; i < jsondata.length; i++) {
-    const screen_placeholder = document.getElementById(`screen_placeholder_${i + 1}`);
+    const screen_placeholder = document.getElementById(
+      `screen_placeholder_${i + 1}`
+    );
     screen_placeholders.push(screen_placeholder);
   }
 
-    /* Listar id card_body_container */
-    const cards_body_container = [];
-    for (let i = 0; i < jsondata.length; i++) {
-      cards_body_container.push(
-        document.getElementById(`card_body_container_${i + 1}`)
-      );
-    }
+  /* Listar id card_body_container */
+  const cards_body_container = [];
+  for (let i = 0; i < jsondata.length; i++) {
+    cards_body_container.push(
+      document.getElementById(`card_body_container_${i + 1}`)
+    );
+  }
 
   /* Variable para abrir y cerrar screens*/
   let screen_bool = true;
@@ -150,11 +164,11 @@ async function main() {
     });
   }
 
-  function crearEventos(){
+  function crearEventos() {
     const btn_screens = [];
     for (let i = 0; i < jsondata.length; i++) {
       btn_screens.push(document.getElementById(`ampliar_${i + 1}`));
-  
+
       /* Crear evento */
       btn_screens[i].addEventListener("click", () => {
         screen(screen_placeholders[i], cards[i], images[i], abrir_screens[i]);
@@ -163,7 +177,6 @@ async function main() {
       });
     }
   }
-
 
   /* Agregar portadas*/
   for (let i = 0; i < jsondata.length; i++) {
@@ -290,7 +303,9 @@ async function main() {
       ].texto.substring(0, 100)}...</p>`;
       cards_body_container[
         id
-      ].innerHTML += `<div class="card_body_container_links"><a class="btn btn_screen link" id="ampliar_${id + 1}">Ampliar</a></div>`;
+      ].innerHTML += `<div class="card_body_container_links"><a class="btn btn_screen link" id="ampliar_${
+        id + 1
+      }">Ampliar</a></div>`;
 
       crearEventos();
     }
@@ -313,6 +328,56 @@ async function main() {
   btn_sobre_mi.addEventListener("click", () => {
     version_sobre_mi.classList.remove("hide");
   });
+
+  /* Eventos formilario */
+  nombre.addEventListener("focusout", () => {
+    error(nombre, 0);
+  });
+
+  email.addEventListener("focusout", () => {
+    errors[1].innerHTML= "<i class=\"fa-solid fa-exclamation\"></i>Todos los campos son obligatorios</p></div>";
+    error(email, 1);
+
+    if (email.value.length > 0) {
+      if (validarMail(email.value)) {
+        errors[1].classList.add("hide");
+      } else {
+        errors[1].classList.remove("hide");
+        errors[1].innerHTML = "<i class=\"fa-solid fa-exclamation\"></i>No es un Email valirdo</p></div>";
+      }
+    }
+  });
+
+  mensaje.addEventListener("focusout", () => {
+    error(mensaje, 2);
+  });
+
+  btn_formulario.addEventListener("click", () => {
+    if(nombre.classList.contains("hide") && email.classList.contains("hide") && mensaje.classList.contains("hide")){
+      alert("Mensaje enviado correctamente");
+    } else{
+      modal_error.classList.remove("hide");
+    }
+  })
+
+  icon_screen_error.addEventListener("click", () => {
+    modal_error.classList.add("hide");
+  });
+
+  function error(input, i) {
+    if (input.value.length > 0) {
+      errors[i].classList.add("hide");
+    }
+
+    if (input.value.length == 0) {
+      errors[i].classList.remove("hide");
+    }
+  }
+
+  function validarMail(mail) {
+    let reg = /\S+@\S+\.\S+/;
+    return reg.test(mail);
+  }
 }
 
 main();

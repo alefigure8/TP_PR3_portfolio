@@ -135,16 +135,40 @@
               <i class="fas fa-chevron-right"></i>
               <p class="titulo_5 text">Contacto</p></span
             >
-            <div class="formulario sombra_3D">
+            <form
+              action="https://formsubmit.co/gomeznieto@gmail.com"
+              method="post"
+              class="formulario sombra_3D"
+            >
               <div class="formulario_bar">
                 <p><i class="fas fa-comment-alt"></i></p>
                 <i class="fas fa-times"></i>
               </div>
               <div class="formulario_control">
-                <input type="text" id="nombre" placeholder="Nombre" required />
+                <input
+                  type="text"
+                  id="nombre"
+                  name="name"
+                  placeholder="Nombre"
+                  required
+                />
+                <p class="hide" id="error_1">
+                  <i class="fa-solid fa-exclamation"></i>Todos los campos son
+                  obligatorios
+                </p>
               </div>
               <div class="formulario_control">
-                <input type="email" id="mail" placeholder="E-Mail" required />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="E-Mail"
+                  required
+                />
+                <p class="hide" id="error_2">
+                  <i class="fa-solid fa-exclamation"></i>Todos los campos son
+                  obligatorios
+                </p>
               </div>
               <div class="formulario_control">
                 <textarea
@@ -154,27 +178,44 @@
                   rows="10"
                   placeholder="Mensaje"
                 ></textarea>
+                <p class="hide" id="error_3">
+                  <i class="fa-solid fa-exclamation"></i>Todos los campos son
+                  obligatorios
+                </p>
               </div>
-
-              <a class="btn sombra_3D btn_formulario" id="btn_sobre_mi"
-                >Enviar</a
+              <button
+                type="submit"
+                class="btn sombra_3D btn_formulario"
+                id="btn_formulario"
               >
-            </div>
+                Enviar
+              </button>
+            </form>
           </section>
         </div>
         <footer id="footer">
           <ul class="ul_footer">
             <li class="li_footer">
-              <a href="http://github.com/alefigure8" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="http://github.com/alefigure8" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
             </li>
             <li class="li_footer">
-              <a href="https://www.linkedin.com/in/alejandro-gomez-nieto/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+              <a
+                href="https://www.linkedin.com/in/alejandro-gomez-nieto/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
             </li>
             <li class="li_footer">
-              <a href="http://instagram.com/alegomeznieto" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="http://instagram.com/alegomeznieto" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
             </li>
             <li class="li_footer">
-              <a href="http://twitter.com/alegomeznieto" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a href="http://twitter.com/alegomeznieto" target="_blank"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
             </li>
           </ul>
         </footer>
@@ -255,6 +296,28 @@
       </div>
     </div>
     <!-- MODAL SOBRE MI -->
+
+    <!-- MODAL ERROR -->
+    <div class="version hide" id="modal_error">
+      <div class="card sombra h-60">
+        <div class="card_bar card_bar_version">
+          <div class="circulos_screen">
+            <div class="circulo_blanco_screen"></div>
+            <div class="circulo_blanco_screen"></div>
+          </div>
+          <p class="titulo_3">ERROR :: AH, AH, AAAH!!</p>
+          <div class="cruz">
+            <i class="fas fa-times icon_screen" id="icon_screen_error"></i>
+          </div>
+        </div>
+        <div class="card_body">
+          <div class="card_body_container">
+            <img src="/img/error_form.gif" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL ERROR -->
     <script src="main.js"></script>
   </body>
 </html>
