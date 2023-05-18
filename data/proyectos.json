@@ -28,7 +28,7 @@
   {
     "id": 3,
     "titulo": "Gran Cerdo",
-    "texto": "Para la entrega final de la materia Laboratorio de la Programamción en la Universidad Tecnológica Nacional, tuve que desarrollar un juego en C++ a partir de unas reglas que me fueron dadas. \n El mismo debía contar con una serie de requisitos, como un menú inicial, estadísticas de juego y créditos, además del juego en sí, el cual se desarrolla a partir de una serie de decisiones que se debe tomar, como seguir arrijando dados o ceder el turno.",
+    "texto": "Para la entrega final de la materia Laboratorio de la Programamción en la Universidad Tecnológica Nacional, tuve que desarrollar un juego en C++ a partir de unas reglas que me fueron dadas. \n El mismo debía contar con una serie de requisitos, como un menú inicial, estadísticas de juego y créditos, además del juego en sí, el cual se desarrolla a partir de una serie de decisiones que se debe tomar, como seguir arrojando dados o ceder el turno.",
     "portada": "img/gran_cerdo.jpg",
     "imagenes": [
       "img/gran_cerdo_1.gif",
@@ -63,7 +63,7 @@
   {
     "id": 6,
     "titulo": "Task Manager",
-    "texto": "Aplicación web de organización de tarea. Cuenta con la posibilidad de creación de usuario, apartura de varios temas. También cuenta con arrastre de tareas para poder ir colocando la misma en la columna a la que pertenece. La página fue realizada con HTML, CSS, Javascript, React, Readux, NodeKS y Express. Utiliza como base de datos Mongo Atlas. <a href=\"https://wizardly-agnesi-b70b8d.netlify.app\">Link</a>",
+    "texto": "Aplicación web de organización de tarea. Cuenta con la posibilidad de creación de usuario, apertura de varios temas. También cuenta con arrastre de tareas para poder ir colocando la misma en la columna a la que pertenece. La página fue realizada con HTML, CSS, Javascript, React, Readux, NodeKS y Express. Utiliza como base de datos Mongo Atlas. <a href=\"https://wizardly-agnesi-b70b8d.netlify.app\">Link</a>",
     "portada": "img/taskmanager.jpg",
     "imagenes": [
       "img/taskmanager_1.gif",
