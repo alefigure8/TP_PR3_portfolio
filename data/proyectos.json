@@ -15,7 +15,7 @@
   {
     "id": 2,
     "titulo": "Gestion Ventas",
-    "texto": "Prgrama de gestión de ventas realizada con .NET Winforms y C#. El mismo cuenta con la capacidad de guardar la información en archivos TXT, además de poder imprimir o descargar los listados de productos y ventas. Cuenta con la posibilidad de almacenar clientres. También se puede realizar presupuesto. Otro dato a destacar es que es capaz de generar analisis de ventas por producto, por cliente y por día, remarcando la cantidad vendida en promedio, en efectivo, tarjeta, como los porcentajes de categorias más vendidos.",
+    "texto": "Programa de gestión de ventas realizada con .NET Winforms y C#. El mismo cuenta con la capacidad de guardar la información en archivos TXT, además de poder imprimir o descargar los listados de productos y ventas. Cuenta con la posibilidad de almacenar clientres. También se puede realizar presupuesto. Otro dato a destacar es que es capaz de generar analisis de ventas por producto, por cliente y por día, remarcando la cantidad vendida en promedio, en efectivo, tarjeta, como los porcentajes de categorias más vendidos.",
     "portada": "/img/gestion.jpg",
     "imagenes": [
       "/img/gestion_1.jpg",
@@ -40,8 +40,8 @@
   },
   {
     "id": 4,
-    "titulo": "Wordles",
-    "texto": "Clon de la popular página wordles. El juego cuenta con una base de datos de palabras, las cuales son elegidas al azar. El jugador debe adivinar la palabra, ingresando letras. Cuenta con encriptcación de resultados, además de un sistema de guardado de puntajes. Realizado con HTML, CSS y JavaScript. <a class=\"bold\" href=\"https://wordle-tan.vercel.app/\">Ver página</a>",
+    "titulo": "Wordle",
+    "texto": "Clon de la popular página wordle. El juego cuenta con una base de datos de palabras, las cuales son elegidas al azar. El jugador debe adivinar la palabra, ingresando letras. Cuenta con encriptcación de resultados, además de un sistema de guardado de puntajes. Realizado con HTML, CSS y JavaScript. <a class=\"bold\" href=\"https://wordle-tan.vercel.app/\">Ver página</a>",
     "portada": "/img/wordles.jpg",
     "imagenes": [
       "/img/wordles_1.jpg",

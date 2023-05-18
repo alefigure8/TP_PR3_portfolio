@@ -152,7 +152,7 @@ async function main() {
   }
 
   /* Listar id btn_screen */
-  const btn_screens = [];
+  let btn_screens = [];
   for (let i = 0; i < jsondata.length; i++) {
     btn_screens.push(document.getElementById(`ampliar_${i + 1}`));
 
@@ -164,18 +164,24 @@ async function main() {
     });
   }
 
-  function crearEventos() {
-    const btn_screens = [];
-    for (let i = 0; i < jsondata.length; i++) {
-      btn_screens.push(document.getElementById(`ampliar_${i + 1}`));
+  /* Regenerar evento de la ventana cerrada*/ 
+  function crearEventos(i) {
+    const newBtn = document.getElementById(`ampliar_${i}`);
+    btn_screens = btn_screens.filter((btn) => btn.id != newBtn.id);
+    btn_screens.push(newBtn);
+    btn_screens.sort((a, b) => a.id.split("_")[1] - b.id.split("_")[1]);
 
-      /* Crear evento */
-      btn_screens[i].addEventListener("click", () => {
-        screen(screen_placeholders[i], cards[i], images[i], abrir_screens[i]);
-        cargarDataEntrada(i);
-        screen_bool = !screen_bool;
-      });
-    }
+    /* Crear evento */
+    btn_screens[i - 1].addEventListener("click", () => {
+      screen(
+        screen_placeholders[i - 1],
+        cards[i - 1],
+        images[i - 1],
+        abrir_screens[i - 1]
+      );
+      cargarDataEntrada(i - 1);
+      screen_bool = !screen_bool;
+    });
   }
 
   /* Agregar portadas*/
@@ -307,7 +313,7 @@ async function main() {
         id + 1
       }">Ampliar</a></div>`;
 
-      crearEventos();
+      crearEventos(jsondata[id].id);
     }
   }
 
@@ -335,7 +341,8 @@ async function main() {
   });
 
   email.addEventListener("focusout", () => {
-    errors[1].innerHTML= "<i class=\"fa-solid fa-exclamation\"></i>Todos los campos son obligatorios</p></div>";
+    errors[1].innerHTML =
+      '<i class="fa-solid fa-exclamation"></i>Todos los campos son obligatorios</p></div>';
     error(email, 1);
 
     if (email.value.length > 0) {
@@ -343,7 +350,8 @@ async function main() {
         errors[1].classList.add("hide");
       } else {
         errors[1].classList.remove("hide");
-        errors[1].innerHTML = "<i class=\"fa-solid fa-exclamation\"></i>No es un Email valirdo</p></div>";
+        errors[1].innerHTML =
+          '<i class="fa-solid fa-exclamation"></i>No es un Email valirdo</p></div>';
       }
     }
   });
@@ -353,12 +361,16 @@ async function main() {
   });
 
   btn_formulario.addEventListener("click", () => {
-    if(nombre.classList.contains("hide") && email.classList.contains("hide") && mensaje.classList.contains("hide")){
+    if (
+      nombre.classList.contains("hide") &&
+      email.classList.contains("hide") &&
+      mensaje.classList.contains("hide")
+    ) {
       alert("Mensaje enviado correctamente");
-    } else{
+    } else {
       modal_error.classList.remove("hide");
     }
-  })
+  });
 
   icon_screen_error.addEventListener("click", () => {
     modal_error.classList.add("hide");
