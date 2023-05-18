@@ -3,11 +3,11 @@
     "id": 1,
     "titulo": "Tank Force",
     "texto": "Reversión del clásico Battle City, realizado con C++ y SFML. El juego fue repensado para tener una cuantas características nuevas, como la posibilidad de girar la torreta, incapacitar al enemigo, arrastrar vehiculos y tanques destruidos y daño por explosión. El juego cuenta con 3 niveles de dificultad, los cuales se diferencian por la velocidad de los enemigos, la cantidad de enemigos y la cantidad de vidas. \n\n El juego cuenta con un sistema de guardado de puntajes, el cual se almacena en un archivo TXT.",
-    "portada": "/img/tank_force.jpg",
+    "portada": "img/tank_force.jpg",
     "imagenes": [
-      "/img/tank_force_1.jpg",
-      "/img/tank_force_2.jpg",
-      "/img/tank_force_3.jpg"
+      "img/tank_force_1.jpg",
+      "img/tank_force_2.jpg",
+      "img/tank_force_3.jpg"
     ],
     "categoria": "Juego",
     "link": "https://github.com/alefigure8/Juego---TP-Final/"
@@ -16,11 +16,11 @@
     "id": 2,
     "titulo": "Gestion Ventas",
     "texto": "Programa de gestión de ventas realizada con .NET Winforms y C#. El mismo cuenta con la capacidad de guardar la información en archivos TXT, además de poder imprimir o descargar los listados de productos y ventas. Cuenta con la posibilidad de almacenar clientres. También se puede realizar presupuesto. Otro dato a destacar es que es capaz de generar analisis de ventas por producto, por cliente y por día, remarcando la cantidad vendida en promedio, en efectivo, tarjeta, como los porcentajes de categorias más vendidos.",
-    "portada": "/img/gestion.jpg",
+    "portada": "img/gestion.jpg",
     "imagenes": [
-      "/img/gestion_1.jpg",
-      "/img/gestion_2.jpg",
-      "/img/gestion_3.jpg"
+      "img/gestion_1.jpg",
+      "img/gestion_2.jpg",
+      "img/gestion_3.jpg"
     ],
     "categoria": "Programa",
     "link": "hhttps://github.com/alefigure8/Gestion-de-Ventas-Archivo-"
@@ -29,11 +29,11 @@
     "id": 3,
     "titulo": "Gran Cerdo",
     "texto": "Para la entrega final de la materia Laboratorio de la Programamción en la Universidad Tecnológica Nacional, tuve que desarrollar un juego en C++ a partir de unas reglas que me fueron dadas. \n El mismo debía contar con una serie de requisitos, como un menú inicial, estadísticas de juego y créditos, además del juego en sí, el cual se desarrolla a partir de una serie de decisiones que se debe tomar, como seguir arrijando dados o ceder el turno.",
-    "portada": "/img/gran_cerdo.jpg",
+    "portada": "img/gran_cerdo.jpg",
     "imagenes": [
-      "/img/gran_cerdo_1.gif",
-      "/img/gran_cerdo_2.gif",
-      "/img/gran_cerdo_3.gif"
+      "img/gran_cerdo_1.gif",
+      "img/gran_cerdo_2.gif",
+      "img/gran_cerdo_3.gif"
     ],
     "categoria": "Juego",
     "link": "https://github.com/alefigure8/UTN---Juego-Parcial"
@@ -42,11 +42,11 @@
     "id": 4,
     "titulo": "Wordle",
     "texto": "Clon de la popular página wordle. El juego cuenta con una base de datos de palabras, las cuales son elegidas al azar. El jugador debe adivinar la palabra, ingresando letras. Cuenta con encriptcación de resultados, además de un sistema de guardado de puntajes. Realizado con HTML, CSS y JavaScript. <a class=\"bold\" href=\"https://wordle-tan.vercel.app/\">Ver página</a>",
-    "portada": "/img/wordles.jpg",
+    "portada": "img/wordles.jpg",
     "imagenes": [
-      "/img/wordles_1.jpg",
-      "/img/wordles_2.jpg",
-      "/img/wordles_3.jpg"
+      "img/wordles_1.jpg",
+      "img/wordles_2.jpg",
+      "img/wordles_3.jpg"
     ],
     "categoria": "Aplicación",
     "link": "https://github.com/alefigure8/Juego---TP-Final"
@@ -55,8 +55,8 @@
     "id": 5,
     "titulo": "Rick & Morty API",
     "texto": "Página realizada a partir de la API de Rick & Morty. La misma cuenta con un buscador de personajes, además de un sistema de favoritos, el cual almacena los personajes en el local storage. Realizado con HTML, CSS, JavaScript, Redux y React. Alojada en Vercel. <a class=\"bold\" href=\"https://rick-and-morty-alegomeznieto.vercel.app/\">Ver página</a>",
-    "portada": "/img/rickmorty.jpg",
-    "imagenes": ["/img/rickmorty_1.gif", "/img/rickmorty_2.jpg", "/img/rickmorty_3.jpg"],
+    "portada": "img/rickmorty.jpg",
+    "imagenes": ["img/rickmorty_1.gif", "img/rickmorty_2.jpg", "img/rickmorty_3.jpg"],
     "categoria": "Aplicación",
     "link": "https://github.com/alefigure8/rick-api"
   },
@@ -64,11 +64,11 @@
     "id": 6,
     "titulo": "Task Manager",
     "texto": "Aplicación web de organización de tarea. Cuenta con la posibilidad de creación de usuario, apartura de varios temas. También cuenta con arrastre de tareas para poder ir colocando la misma en la columna a la que pertenece. La página fue realizada con HTML, CSS, Javascript, React, Readux, NodeKS y Express. Utiliza como base de datos Mongo Atlas. <a href=\"https://wizardly-agnesi-b70b8d.netlify.app\">Link</a>",
-    "portada": "/img/taskmanager.jpg",
+    "portada": "img/taskmanager.jpg",
     "imagenes": [
-      "/img/taskmanager_1.gif",
-      "/img/taskmanager_2.gif",
-      "/img/taskmanager_3.gif"
+      "img/taskmanager_1.gif",
+      "img/taskmanager_2.gif",
+      "img/taskmanager_3.gif"
     ],
     "categoria": "Aplicación",
     "link": "https://github.com/alefigure8/dashboard-react/"

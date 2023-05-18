@@ -837,9 +837,10 @@ footer {
   .links ul {
     width: 100%;
   }
+
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .container {
     width: 100%;
     height: 100%;
@@ -865,4 +866,27 @@ footer {
     grid-template-columns: 10% 80% 10%;
     border-bottom: 0.3rem solid var(--color_black);
   }
+
+  .formulario{
+    width: 100%;
+  }
+
+  .btn_perfil{
+    flex-direction: column;
+  }
+
+  .cards{
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+
+  .card{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .screen_absolute{
+    width: 80%;
+  }
+  
 }
