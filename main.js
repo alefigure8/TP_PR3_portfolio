@@ -351,7 +351,7 @@ async function main() {
       } else {
         errors[1].classList.remove("hide");
         errors[1].innerHTML =
-          '<i class="fa-solid fa-exclamation"></i>No es un Email valirdo</p></div>';
+          '<i class="fa-solid fa-exclamation"></i>No es un Email valido</p></div>';
       }
     }
   });
